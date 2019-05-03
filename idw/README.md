@@ -92,4 +92,10 @@ end
 ```
 
 You can solve this part by looping through all elements of 
-#the result grid `vgrid`.
+the result grid `vgrid`.
+
+## Task 5
+
+Use your code from task 4 to genereate a IDW interpolation from the given 
+precipiation observations. Make a decision for the used method and parameters 
+and describe this decision (in class).

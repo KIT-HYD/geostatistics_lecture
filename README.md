@@ -9,3 +9,15 @@ The solved tasked can be submitted by one of the following ways:
 * Directly here on github, by sending a [Pull Request](https://help.github.com/en/articles/about-pull-requests). This is the prefered way   and will be explained in the first lecture.
 * Upload the solutions on [ILIAS](https://ilias.studium.kit.edu/)
 * Send them via mail to the instructors
+
+### Get the files
+
+For Windows, there is a [Desktop Application](https://desktop.github.com/) to manage a git repository. 
+You can download the files from this site using the green button *clone or download*. There is also a
+possibility to download the files as a ZIP archive.
+
+The perefered way is to clone the full repository with the git cli:
+
+```bash
+git clone https://github/kit-hyd/geostatistics_lecture.git
+```
