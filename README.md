@@ -1,5 +1,6 @@
 # Geostatistics lecture
 
+## Introduction
 You can use this repository to solve all tasks and exercises of our 'Geostatistics' ([LV 6224805 on Campus Management](https://campus.studium.kit.edu/ev/2HKQRqFeSTu15TtPGocP-Q/de)) lecture. Each exercise/task is contained in one folder with at least a `README.md` file in it, which contains more information. 
 
 `.md` is the [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) format. This is basically a text format and can be opened by every text editor. To render the contained styling open these files either here on github or with a specialized editor like [Typora](https://typora.io/).
@@ -10,7 +11,7 @@ The solved tasked can be submitted by one of the following ways:
 * Upload the solutions on [ILIAS](https://ilias.studium.kit.edu/)
 * Send them via mail to the instructors
 
-### Get the files
+## Get the files
 
 For Windows, there is a [Desktop Application](https://desktop.github.com/) to manage a git repository. 
 You can download the files from this site using the green button *clone or download*. There is also a
@@ -21,3 +22,9 @@ The perefered way is to clone the full repository with the git cli:
 ```bash
 git clone https://github/kit-hyd/geostatistics_lecture.git
 ```
+
+## Exercises
+
+| Exercise | Folder | 
+|----------|--------|
+| 01 - IDW | [idw folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/master/idw) |
