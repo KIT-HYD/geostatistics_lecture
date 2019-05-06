@@ -20,20 +20,39 @@ function vgrid = inverse_distance(xi, yi, vi, gridsize, method, arg)
   x_range = max(xi) - min(xi);
   y_range = max(yi) - min(yi);
   
-  vgrid = ones(int8(y_range / gridsize), int8(x_range / gridsize)) * -9999;
+  vgrid = ones(int8(y_range / gridsize), int8(x_range / gridsize)) * NaN;
+  
+  % SOLUTION START
+  % get the size
+  [rows cols] = size(vgrid)
+  
+  % get the steps
+  stepx = x_range / cols;
+  stepy = y_range / rows;
+  minx = min(xi);
+  miny = min(yi);
   
   if method == 1
-    % REPLACE FROM HERE
-    % apply the correct function to all cells
-    vgrid = ones(size(vgrid)) * mean(vi);
-    % TO HERE
+    for i=1:rows
+      for j=1:cols
+        % current coordinates
+        x = (j - 1) * stepx + minx;
+        y = (i - 1) * stepy + miny;
+        vgrid(i,j) = inverse_distance_fixed_radius(xi, yi, vi, x, y, arg);
+      end
+    end
   elseif method == 2
-    % REPLACE FROM HERE
-    % apply the correct function to all cells
-    vgrid = ones(size(vgrid)) * mean(vi);
-    % TO HERE
+    for i=1:rows
+      for j=1:cols
+        % current coordinates
+        x = (j - 1) * stepx + minx;
+        y = (i - 1) * stepy + miny;
+        vgrid(i,j) = inverse_distance_fixed_neighbors(xi, yi, vi, x, y, arg);
+      end
+    end
    else
     error('method can only be 1 (fixed radius) or 2 (fixed neighbors)');
   end
+  % SOLUTION END
   
 end
