@@ -16,7 +16,7 @@ a histogram of the sample stored in an array `x` is as easy as:
 mean(x)
 std(x)
 var(x)
-histcounts(x, 25)
+hist(x, 25)
 ```
 
 But what have you actually done? Do you know that? What is the variance or mean?
@@ -44,5 +44,38 @@ the `test.m` accordingly:
   than one test...
 * Now, think of a stupid user. What could go wrong? Test against it.
 
+## Task 3
 
- 
+With real data we usually never observe exhaustively. We use a **sample** of the 
+reality, calculate some statistical properties of that sample and assume that 
+these properties also apply to reality. 
+Aim of this task is to get familiar with some of the fundamental statistical measures
+and their dependence of sample size.
+
+The script `sampling.m` creates an artificial soil moisture dataset using the lines:
+
+```Matlab
+soil_moisture = randn(500000,1) .* 5 + 25
+```
+
+Note that this is an artificial **univariate** dataset. Unlike real soil moisture 
+data, the (temporal) ordering of the data is uncorrelated and does not have any meaning.
+The `sampling.m` prints the statistical moments created with your code from the 
+prveious tasks to the screen and plots an histogram function.
+
+You can use the following code to draw samples from `soil_moisture`:
+
+```Matlab
+datasample(soil_moisture, 50, 'Replace', false)
+```
+which will produce 50 *observations*.
+How well are the statistical properties of soil moisture estimated, when using a 
+sample size of:
+
+* 15
+* 25
+* 50
+* 100
+* 1000
+* 5000
+* 50000
