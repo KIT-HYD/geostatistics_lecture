@@ -28,3 +28,4 @@ git clone https://github/kit-hyd/geostatistics_lecture.git
 | Exercise | Folder | 
 |----------|--------|
 | 01 - IDW | [idw folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/master/idw) |
+| 02 - Univariate Statistics | [univariate folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/master/univariate) |
