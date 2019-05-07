@@ -79,3 +79,35 @@ sample size of:
 * 1000
 * 5000
 * 50000
+
+## Task 4
+
+This task will use more complex input data. There is a function in the folder called
+`synthetic_signal.m` which can be used to create sine-based signals, like air temperature.
+Here, the ordering of the values has a meaning. Run the `temperature_study.m` 
+file, which will create two timeseries and compare them value by value. The two
+small plots are the histograms of each signal individually. 
+
+* What are the differences between the signals?
+* Can you describe the scatter plot? What does it show?
+* Change mean values and amplitude of one and both signals. What is the influence of 
+each one on the correlation between both? 
+* How *different* can you make the the parameters to still judge both series as *similar*?
+
+## Task 5
+
+In task 4, the correlation coefficient between the two time series is calculated.
+Now, write a new script or function that will take only one the series. Duplicate the 
+series and and *shift* it by one element. That means, take the first element of the 
+array and push it to the end. Then the formerly second element should be the first now.
+You call this a **lag** of 1.
+
+### a)
+What is the correlation coefficient now? Did it change significantly?
+
+### b)
+Repeat the precedure for a lag of 10, 100, and 500.
+
+### c)
+Repeat the procedure for all lags: 1, 2, 3, ... N-1 and plot the resulting 
+correlation coefficient a against the lag. Describe this result.
