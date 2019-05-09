@@ -1,16 +1,15 @@
-function [count, edges] = histogram_counts(x, bins)
+function [counts, centers] = histogram_counts(x, bins)
   %  histogram_counts  Calculate histogram
   % 
   %  Arguments
   %  ---------
   %  x      1D array of sample input data
-  %  bins   int8, number of equidstant bins
+  %  bins   int64, number of equidstant bins
   %
   %  Returns
   %  -------
-  %  count  array of bins length, the count of samples per class
-  %  edges  array of bins length + 1, the lower bound and all upper bounds of
-  %         all bin classes
+  %  counts    array of bins length, the count of samples per class
+  %  centers   array of bins length containing the bin class centers.
   
-  [count, edges] = hist(x, bins); % REPLACE THIS LINE
+  [count, centers] = hist(x, bins); % REPLACE THIS LINE
 end
