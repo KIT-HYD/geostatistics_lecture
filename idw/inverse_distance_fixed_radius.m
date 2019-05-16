@@ -26,6 +26,30 @@ function v = inverse_distance_fixed_radius(xi, yi, vi, x, y, r)
   end 
   
   % REPLACE FROM HERE
-  v = mean(vi)
+  
+  % Selection
+  d = []
+  va = []
+  for i  = 1:length(xi)
+  if  r >= sqrt(abs(x-xi(i))^2 + abs(y-yi(i))^2)
+      
+      d = [d, sqrt(abs(x-xi(i))^2 + abs(y-yi(i))^2)]
+      
+      va = [va, vi(i)]
+  
+  end
+  
+  end
+  
+  % Interpolation
+  vx = 0
+  vy = 0
+  for i = 1:length(va)
+    vx = vx + va(i)/d(i)
+    vy = vy + 1/d(i)
+  end
+  
+    v = vx/vy
+   % v = mean(vi)
   % UNTIL HERE
 end

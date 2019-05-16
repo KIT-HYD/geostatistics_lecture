@@ -26,6 +26,41 @@ function v = inverse_distance_fixed_neighbors(xi, yi, vi, x, y, n)
   end 
   
   % REPLACE FROM HERE
-  v = mean(vi)
+  b = []
+  for i  = 1:length(xi)
+       
+      b = [b, sqrt(abs(x-xi(i))^2 + abs(y-yi(i))^2)]
+  
+  end
+  
+  d= []
+  va = []
+  ve = vi
+  for i = 1:n
+     
+      d = [d, min(b)]
+     
+     e = find(b==min(b))
+     
+     va = [va, ve(e)]
+     
+     b(e) = []
+     ve(e) = []
+     
+     
+
+  end
+  
+  % Interpolation
+  vx = 0
+  vy = 0
+  for i = 1:length(va)
+    vx = vx + va(i)/d(i)
+    vy = vy + 1/d(i)
+  end
+  
+    v = vx/vy
+  
+  %v = mean(vi)
   % UNTIL HERE
 end
