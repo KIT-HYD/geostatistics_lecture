@@ -29,3 +29,15 @@ git clone https://github/kit-hyd/geostatistics_lecture.git
 |----------|--------|
 | 01 - IDW | [idw folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/master/idw) |
 | 02 - Univariate Statistics | [univariate folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/master/univariate) |
+| 03 - Multivariate Statistics | [distance folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/master/distance) |
+
+## Solutions
+
+My solutions to all given tasks can be found on the soultions branch. 
+The links are given in the table below, or just change the branch on Github directly 
+to browse the contents. 
+
+| Exercise | Solution |
+|----------|----------|
+| 01 - IDW | [idw folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/solutions/idw) |
+| 02 - Univariate Statistics | [univariate folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/solutions/univariate) |
