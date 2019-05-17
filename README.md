@@ -41,3 +41,5 @@ to browse the contents.
 |----------|----------|
 | 01 - IDW | [idw folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/solutions/idw) |
 | 02 - Univariate Statistics | [univariate folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/solutions/univariate) |
+| 03 - Multivariate Statistics | [distance folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/solutions/distance) |
+
