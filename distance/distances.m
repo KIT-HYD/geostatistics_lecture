@@ -1,9 +1,9 @@
 function d=distances(X)
   % distances Calculates the upper triangle of distance_matrix.m
   % 
-  % For X of shape(N,2), an array of N**2 - N elements containing 
+  % For X of shape(N,2), an array of (N**2 - N) / 2 elements containing 
   % the row-wise ordered upper triangle of distance_matrix.m is 
-  % retruned
+  % returned
   %
   %  Arguments
   %  ---------
