@@ -94,3 +94,12 @@ absoulte difference `abs(v1 - v2)` as the *distance* metric for observations.
 Create a scatter plot that relates each separating distance between any of the 
 point pairs to the corresponding distance in value.
 
+## Task 5
+
+Last but not least, we will formulate a more functional relationship between the 
+two distance measures formulated in the previous tasks. Calculate the arithmetic mean
+and variance (first and second univariate statistical moment)
+for each of the distance lag classes. Plot these relationships.
+
+Now consider the results from Task 4. Are these relationships sufficiently describing 
+the interconnection of proximity in distance and proximity in value? 
