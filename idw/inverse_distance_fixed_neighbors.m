@@ -25,7 +25,12 @@ function v = inverse_distance_fixed_neighbors(xi, yi, vi, x, y, n)
     error('The coordinate arrays do not have the same size');
   end 
   
-  % REPLACE FROM HERE
-  v = mean(vi)
-  % UNTIL HERE
+  % SOLUTION START
+  d = sqrt((xi - x).^2 + (yi - y).^2);
+  [sorted_d idx] = sort(d);
+  d_in = sorted_d(1:n);
+  
+  v = sum(vi(idx)(1:n) ./ d_in) / sum(ones(1, length(d_in)) ./ d_in );
+  
+  % SOLUTION END
 end
