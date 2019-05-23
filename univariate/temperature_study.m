@@ -18,7 +18,7 @@ hold on;
 plot(t, y2, 'b--');
 title('Temperature signal');
 xlabel('Time');
-ylabel('Temperature [°C]');
+ylabel('Temperature [deg. C]');
 
 ax2 = subplot(3, 3 , [4 5 7 8]);
 plot(y1, y2, 'go'); 
