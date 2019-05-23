@@ -10,5 +10,7 @@ function s2 = variance(x)
   %  s2  double, the variance of x
   %
   
-  s2 = var(x); % REPLACE THIS LINE
+  % SOLUTION START
+  s2 = standard_deviation(x)^2;
+  % SOLUTION END
 end
