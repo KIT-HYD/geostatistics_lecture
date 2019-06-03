@@ -22,7 +22,6 @@ function vgrid = inverse_distance(xi, yi, vi, gridsize, method, arg)
   
   vgrid = ones(int8(y_range / gridsize), int8(x_range / gridsize)) * NaN;
   
-  % SOLUTION START
   % get the size
   [rows cols] = size(vgrid)
   
@@ -35,24 +34,21 @@ function vgrid = inverse_distance(xi, yi, vi, gridsize, method, arg)
   if method == 1
     for i=1:rows
       for j=1:cols
-        % current coordinates
-        x = (j - 1) * stepx + minx;
-        y = (i - 1) * stepy + miny;
-        vgrid(i,j) = inverse_distance_fixed_radius(xi, yi, vi, x, y, arg);
+        % YOUR SOULTION FROM HERE
+        % vgrid(i,j) = 
+        % TO HERE
       end
     end
   elseif method == 2
     for i=1:rows
       for j=1:cols
-        % current coordinates
-        x = (j - 1) * stepx + minx;
-        y = (i - 1) * stepy + miny;
-        vgrid(i,j) = inverse_distance_fixed_neighbors(xi, yi, vi, x, y, arg);
+        % YOUR SOLUTION FROM HERE
+        % vgrid(i,j) = 
+        % TO HERE
       end
     end
    else
     error('method can only be 1 (fixed radius) or 2 (fixed neighbors)');
   end
-  % SOLUTION END
   
 end

@@ -13,18 +13,7 @@ function d=distances(X)
   %  -------
   %  d upper triangle of distance_matrix.m as 1D array 
   
-  % SOLUTION START
-  N = length(X);
-  d = ones(1, (N^2 - N) / 2) * -1;
-  
-  count = 1;
-  for i=1:N
-    for j=1:N
-      if i < j
-        d(count) = sqrt( (X(i,1) - X(j, 1))^2 + (X(i, 2) - X(j, 2))^2 );
-        count = count + 1;
-      end
-    end
-  end
-  % SOLUTION END
+  % REPLACE FROM HERE
+  d = pdist(X)
+  % TO HERE
 end
