@@ -10,9 +10,7 @@ function s = standard_deviation(x)
   %  s  double, the standard deviation of x
   %
   
-  % SOLUTION START
-  m = average(x);
-  N = length(x);
-  s = sqrt(sum((x - m).^2) / (N -1));
-  % SOLUTION END
+  % REPLACE FROM HERE
+  s = std(x);
+  % TO HERE
 end

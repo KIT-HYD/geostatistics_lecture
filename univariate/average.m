@@ -10,8 +10,7 @@ function m = average(x)
   %  m  double, the mean of x
   %
   
-  % SOLUTION START
-  N = length(x);
-  m = sum(x) / N;
-  % SOLUTION END
+  % REPLACE FROM HERE
+  m = mean(x);
+  % TO HERE
 end
