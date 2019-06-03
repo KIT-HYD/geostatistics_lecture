@@ -12,15 +12,8 @@ function M=distance_matrix(X)
   %  -------
   %  M matrix of shape (N, N) of all pairwise distances
  
-  % SOLUTION START
-  N = length(X);
-  M = ones(N, N) * -1;  
-  
-  for i=1:N
-    for j=1:N
-      M(i,j) = sqrt( (X(i,1) - X(j, 1))^2 + (X(i, 2) - X(j, 2))^2 );
-    end
-  end
-  % SOLUTION END
+  % REPLACE FROM HERE
+  M = squareform(pdist(X))
+  % TO HERE
 
 end

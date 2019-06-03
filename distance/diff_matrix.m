@@ -12,13 +12,6 @@ function V=diff_matrix(x)
   %  -------
   %  M matrix of shape (N, N) of all pairwise absoulte observation distances
  
-  N = length(x);
-  V = ones(N, N) * -1;  
-  
-  for i=1:N
-    for j=1:N
-      V(i,j) = abs(x(i) - x(j));
-    end
-  end
+  % YOUR CODE HERE
 
 end

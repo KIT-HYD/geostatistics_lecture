@@ -13,16 +13,6 @@ function v=diffs(x)
   %  -------
   %  d upper triangle of diff_matrix.m as 1D array 
   
-  N = length(x);
-  v = ones(1, (N^2 - N) / 2) * -1;
+  % YOUR CODE HERE
   
-  count = 1;
-  for i=1:N
-    for j=1:N
-      if i < j
-        v(count) = abs(x(i) - x(j));
-        count = count + 1;
-      end
-    end
-  end
 end
