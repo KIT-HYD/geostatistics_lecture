@@ -31,6 +31,7 @@ git clone https://github/kit-hyd/geostatistics_lecture.git
 | 02 - Univariate Statistics | [univariate folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/master/univariate) |
 | 03 - Multivariate Statistics | [distance folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/master/distance) |
 | 04 - Variograms | [variogram folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/master/variogram) |
+| 05 - Variogram models | [variogram folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/master/fitting) |
 
 ## Solutions
 
@@ -44,3 +45,4 @@ to browse the contents.
 | 02 - Univariate Statistics | [univariate folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/solutions/univariate) |
 | 03 - Multivariate Statistics | [distance folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/solutions/distance) |
 | 04 - Variograms | [variogram folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/solutions/variogram) |
+| 05 - Variogram models | [variogram folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/solutions/fitting) |
