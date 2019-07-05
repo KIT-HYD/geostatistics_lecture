@@ -30,6 +30,8 @@ git clone https://github/kit-hyd/geostatistics_lecture.git
 | 01 - IDW | [idw folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/master/idw) |
 | 02 - Univariate Statistics | [univariate folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/master/univariate) |
 | 03 - Multivariate Statistics | [distance folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/master/distance) |
+| 04 - Variograms | [distance folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/master/variogram) |
+| 04 - Variogram models | [distance folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/master/fitting) |
 
 ## Solutions
 
@@ -41,3 +43,5 @@ to browse the contents.
 |----------|----------|
 | 01 - IDW | [idw folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/solutions/idw) |
 | 02 - Univariate Statistics | [univariate folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/solutions/univariate) |
+| 04 - Variograms | [distance folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/solutions/variogram) |
+| 04 - Variogram models | [distance folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/solutions/fitting) |
