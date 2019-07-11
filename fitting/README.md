@@ -29,7 +29,7 @@ development. The definitions of the models can be found below
 
 ### Spherical model
 
-![spherical variogram model](http://latex.codecogs.com/svg.latex?\gamma%20=%20\begin{cases}%20b%20+%20C_0%20*%20\left(\frac{3%20*%20h}{2%20*%20a}%20-%20\frac{1}{2}%20*%20\left(\frac{h}{a}%20\right%20)^3\right)%20&%20h%20%3C=%20r%20\\%20b%20+%20C_0%20&%20h%20%3E%20r%20\end{cases})
+![spherical variogram model](spherical.svg)
 
 ### Exponential model
 
