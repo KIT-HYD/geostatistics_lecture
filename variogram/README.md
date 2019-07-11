@@ -20,7 +20,7 @@ Geoges Matheron in 1963. This semi-variance is defined as:
 
 Implement this formula as the `matheron.m` function. Note that `matheron.m` 
 should accept the **array of differences**, not the array of values.
-The differences are the part ![matheron](http://latex.codecogs.com/svg.latex?x_{h}=\{x_i-(x_i+h)\} 
+The differences are the part ![matheron](http://latex.codecogs.com/svg.latex?x_{h}=\{x_i-(x_i+h)\})
 for a given value of h. 
 
 You can use the `test_matheron.m` to test your code.
