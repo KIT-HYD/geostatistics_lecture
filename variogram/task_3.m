@@ -17,18 +17,27 @@ maxd = max(d)
 bins = linspace(0, maxd, n_classes + 1);
 
 % calculate
-gamma = ones(1, n_classes) * NaN;
+gamma_m = ones(1, n_classes) * NaN;
+gamma_c = ones(1, n_classes) * NaN;
 
 for i=2:length(bins)
   samp = v((d > bins(i - 1)) & (d <= bins(i)));
   if length(samp) > 1
-    gamma(i -1) = matheron(samp);
+    gamma_m(i -1) = matheron(samp);
+    gamma_c(i -1) = cressie(samp);
   end
 end
 
 % plot
 figure;
-plot(bins(2:n_classes + 1), gamma, 'o-r');
-title('Variogram');
+subplot(1,2,1);
+plot(bins(2:n_classes + 1), gamma_m, 'o-r');
+title('Matheron');
+xlabel('lag');
+ylabel('semi-variance');
+
+subplot(1,2,2);
+plot(bins(2:n_classes + 1), gamma_c, 'o-r');
+title('Cressie');
 xlabel('lag');
 ylabel('semi-variance');
