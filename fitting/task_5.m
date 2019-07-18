@@ -42,9 +42,10 @@ expo = @(param, h) arrayfun(@exponential, h, param(1), param(2), param(3));
 gaus = @(param, h) arrayfun(@gaussian, h, param(1), param(2), param(3));
 
 % optimize parameters using least squares
-param_s = lsqcurvefit(sph, x0, bins, gamma, lo, hi);
-param_e = lsqcurvefit(expo, x0, bins, gamma, lo, hi);
-param_g = lsqcurvefit(gaus, x0, bins, gamma, lo, hi);
+param_s = lsqcurvefit(sph, x0, bins, gamma, lo, hi)
+param_e = lsqcurvefit(expo, x0, bins, gamma, lo, hi)
+param_g = lsqcurvefit(gaus, x0, bins, gamma, lo, hi)
+
 % apply optimized models
 gamma_opt_sph = arrayfun(@spherical, h, param_s(1), param_s(2), param_s(3));
 gamma_opt_exp = arrayfun(@exponential, h, param_e(1), param_e(2), param_e(3));
