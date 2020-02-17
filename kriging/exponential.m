@@ -19,6 +19,4 @@ function gamma=exponential(h, r, C0, b)
   % REPLACE FROM HERE
   %gamma = 0.42 * C0;
   % TO HERE
-  a = r / 3.;
-  gamma = b + C0 * (1 - exp(-h / a) );
 end
