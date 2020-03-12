@@ -1,3 +1,7 @@
+numpy
+pandas
 jupyter
-octave_kernel
+jupyter_contrib_nbextensions
 rise
+bokeh
+holoviews
