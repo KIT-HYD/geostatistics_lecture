@@ -23,19 +23,17 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.6
-        
-    # switch into lectures folder
-    - run: cd ./lectures
 
     # install requirements
     - name: Install requirements
       run: | 
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install -r ./lectures/requirements.txt
         
     # Compile notebooks
     - name: Compile Notebooks
       run: | 
+        cd ./lectures
         mkdir ./nb
         jupyter nbconvert --to html --output-dir='./nb' *.ipynb
         jupyter nbconvert --to slides --output-dir='./nb' *ipynb
@@ -43,6 +41,7 @@ jobs:
     # install latest notebook classroom app
     - name: Install Notebook-classroom
       run: | 
+        cd ./lectures
         wget https://github.com/mmaelicke/notebook-classroom/releases/latest/download/notebook-classroom.zip
         unzip ./notebook-classroom.zip -d ./dist
         mv ./nb/* ./dist/nb
@@ -52,6 +51,6 @@ jobs:
       uses: crazy-max/ghaction-github-pages@v1
       with:
         target_branch: gh-pages
-        build_dir: ./dist
+        build_dir: ./lectures/dist
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
