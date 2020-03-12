@@ -44,7 +44,13 @@ jobs:
         cd ./lectures
         wget https://github.com/mmaelicke/notebook-classroom/releases/latest/download/notebook-classroom.zip
         unzip ./notebook-classroom.zip -d ./dist
+    
+    # move all neccessary files
+    - name: Copy content
+      run: | 
+        cd ./lectures
         mv ./nb/* ./dist/nb
+        mv ./index.md ./dist/static/index.md
         mv configuration.js ./dist/configuration.js
         
     - name: Deploy
