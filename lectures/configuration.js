@@ -9,10 +9,19 @@ var Config ={
         },
         {
             label: "Presentations",
-            navigation: []
+            navigation: [
+                {
+                    label: "Overview",
+                    link: "01_overview.slides.html"
+                },
+                {
+                    label: "Introduction",
+                    link: "02_introduction.slides.html"
+                }
+            ]
         },
         {
-            label: "Noteboos",
+            label: "Notebooks",
             navigation: []
         },
         {
