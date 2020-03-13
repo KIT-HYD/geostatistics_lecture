@@ -6,6 +6,10 @@ name: Notebook-Classrom
 on:
   push:
     branches: [ master ]
+  schedule:
+    # change this as you need it: https://help.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events-schedule
+    # runs at 1:30 on saturday
+    - cron: '30 1 * * 6'
 
 # Jobs to compile notebook classroom
 jobs:
@@ -42,7 +46,7 @@ jobs:
     - name: Install Notebook-classroom
       run: | 
         cd ./lectures
-        wget https://github.com/mmaelicke/notebook-classroom/releases/latest/download/notebook-classroom.zip
+        wget https://github.com/hydrocode-de/notebook-classroom/releases/latest/download/notebook-classroom.zip
         unzip ./notebook-classroom.zip -d ./dist
     
     # move all neccessary files
