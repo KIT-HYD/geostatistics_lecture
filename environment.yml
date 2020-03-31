@@ -1,0 +1,14 @@
+name: geostat
+channels:
+    - defaults
+dependencies:
+    - python=3.7
+    - pandas
+    - matplotlib
+    - jupyter
+    - bokeh=1.4.0
+    - plotly
+    - holoviews
+    - pip:
+        - jupyter_contrib_nbextensions
+        - rise==5.6.1

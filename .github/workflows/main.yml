@@ -31,8 +31,7 @@ jobs:
     # install requirements
     - name: Install requirements
       run: | 
-        python -m pip install --upgrade pip
-        pip install -r ./lectures/requirements.txt
+        conda env update -f environment.yml -n base
         
     # Compile notebooks
     - name: Compile Notebooks
@@ -54,8 +53,10 @@ jobs:
       run: | 
         cd ./lectures
         mv ./nb/* ./dist/nb
-        mv ./index.md ./dist/static/index.md
         mv configuration.js ./dist/configuration.js
+        [ -d ./static ] && mv ./static/* ./dist/static/* 
+        [ -f ./index.md ] && mv index.md ./dist/static/index.md
+        [ -d ./img ] && mv ./img ./dist/img
         
     - name: Deploy
       uses: crazy-max/ghaction-github-pages@v1
