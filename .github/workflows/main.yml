@@ -54,7 +54,7 @@ jobs:
         cd ./lectures
         mv ./nb/* ./dist/nb
         mv configuration.js ./dist/configuration.js
-        #[ -d ./static ] && mv ./static/* ./dist/static/* 
+        [ -d ./static ] && mv ./static/* ./dist/static/* 
         [ -f ./index.md ] && mv index.md ./dist/static/index.md
         #[ -d ./img ] && mv ./img ./dist/img
         
