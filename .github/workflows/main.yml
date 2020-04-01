@@ -6,10 +6,10 @@ name: Notebook-Classrom
 on: push
 #  push:
 #    branches: [ master ]
-  schedule:
-    # change this as you need it: https://help.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events-schedule
-    # runs at 1:30 on saturday
-    - cron: '30 1 * * 6'
+#  schedule:
+#    # change this as you need it: https://help.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events-schedule
+#    # runs at 1:30 on saturday
+#    - cron: '30 1 * * 6'
 
 # Jobs to compile notebook classroom
 jobs:
