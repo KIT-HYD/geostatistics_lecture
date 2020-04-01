@@ -55,7 +55,7 @@ jobs:
         mv ./nb/* ./dist/nb
         mv configuration.js ./dist/configuration.js
         #[ -d ./static ] && mv ./static/* ./dist/static/* 
-        #[ -f ./index.md ] && mv index.md ./dist/static/index.md
+        [ -f ./index.md ] && mv index.md ./dist/static/index.md
         #[ -d ./img ] && mv ./img ./dist/img
         
     - name: Deploy
