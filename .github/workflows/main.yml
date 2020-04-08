@@ -3,7 +3,7 @@
 name: Notebook-Classrom
 
 # Only run on push to the master branch
-on:
+on: 
   push:
     branches: [ master ]
   schedule:
@@ -56,7 +56,7 @@ jobs:
         mv configuration.js ./dist/configuration.js
         [ -d ./static ] && mv ./static/* ./dist/static/* 
         [ -f ./index.md ] && mv index.md ./dist/static/index.md
-        [ -d ./img ] && mv ./img ./dist/img
+        #[ -d ./img ] && mv ./img ./dist/img
         
     - name: Deploy
       uses: crazy-max/ghaction-github-pages@v1
