@@ -5,7 +5,7 @@ name: Notebook-Classrom
 # Only run on push to the master branch
 on: 
   push:
-    branches: [ master ]
+    branches: [ master, patch-exercises ]
   schedule:
     # change this as you need it: https://help.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events-schedule
     # runs at 1:30 on saturday
@@ -57,6 +57,14 @@ jobs:
         [ -d ./static ] && mv ./static/* ./dist/static/* 
         [ -f ./index.md ] && mv index.md ./dist/static/index.md
         #[ -d ./img ] && mv ./img ./dist/img
+
+    # copy the exercises
+    # TODO: maybe add all readme files
+    - name: Add Exercises
+      run: |
+        mv ./exercises/README.md ./lectures/dist/static/exercises.md
+        zip -r ./lectures/dist/static/exercises.zip ./exercises
+
         
     - name: Deploy
       uses: crazy-max/ghaction-github-pages@v1

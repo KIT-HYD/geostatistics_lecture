@@ -39,6 +39,11 @@ var Config ={
             ]
         },
         {
+            label: "Exercises",
+            link: "exercises.md",
+            type: "static"
+        },
+        {
             label: "About",
             link: "about.md",
             type: "static"
