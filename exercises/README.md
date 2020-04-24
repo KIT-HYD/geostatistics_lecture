@@ -12,8 +12,8 @@ the exercises. Lecture material can be found at:
 
 ## Get the files
 
-If you just want to download the exercise material follow 
-[this link](https://https://kit-hyd.github.io/geostatistics_lecture/static/exercises.zip).
+**If you just want to download the exercise material follow 
+[this link](https://kit-hyd.github.io/geostatistics_lecture/static/exercises.zip).**
 
 You can also *clone* the whole material, including the lectures here from Github.
 For Windows, there is a [Desktop Application](https://desktop.github.com/) to manage a git repository. 
@@ -25,7 +25,8 @@ The perefered way is to clone the full repository with the git cli:
 git clone https://github/kit-hyd/geostatistics_lecture.git
 ```
 
-If you want to run the lecture notebooks on your own computer, please read the [instructions](https://github.com/KIT-HYD/geostatistics_lecture/tree/master/lectures) carefully first.
+If you want to run the lecture notebooks on your own computer, 
+please read the [instructions](https://github.com/KIT-HYD/geostatistics_lecture/tree/master/lectures) carefully first.
 
 
 ## Exercises
