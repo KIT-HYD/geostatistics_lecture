@@ -21,6 +21,22 @@ var Config ={
                 {
                     label: "Univariate Statistics",
                     link: "03_univariate_statistics.slides.html"
+                },
+                {
+                    label: "Excursus: Time Series",
+                    link: "04_timeseries.slides.html"
+                },
+                {
+                    label: "Spatial Structure",
+                    link: "05_spatial.slides.html"
+                },
+                {
+                    label: "Variogram Models",
+                    link: "06_variograms.slides.html"
+                },
+                {
+                    label: "Kriging",
+                    link: "07_kriging.slides.html"
                 }
             ]
         },
@@ -34,7 +50,28 @@ var Config ={
                 },
                 {
                     label: "Univariate Statistics",
-                    link: "03_univariate_statistics.html"
+                    link: "03_univariate_statistics.html",
+                    binder: "https://mybinder.org/v2/gh/KIT-HYD/geostatistics_lecture/master?filepath=lectures%2F03_univariate_statistics.ipynb"
+                },
+                {
+                    label: "Excursus: Time Series",
+                    link: "04_timeseries.html",
+                    binder: "https://mybinder.org/v2/gh/KIT-HYD/geostatistics_lecture/master?filepath=lectures%2F04_timeseries.ipynb"
+                },
+                {
+                    label: "Spatial Structure",
+                    link: "05_spatial.html",
+                    binder: "https://mybinder.org/v2/gh/KIT-HYD/geostatistics_lecture/master?filepath=lectures%2F05_spatial.ipynb"
+                },
+                {
+                    label: "Variogram Models",
+                    link: "06_variograms.html",
+                    binder: "https://mybinder.org/v2/gh/KIT-HYD/geostatistics_lecture/master?filepath=lectures%2F06_variograms.ipynb"
+                },
+                {
+                    label: "Kriging",
+                    link: "07_kriging.html",
+                    binder: "https://mybinder.org/v2/gh/KIT-HYD/geostatistics_lecture/master?filepath=lectures%2F07_kriging.ipynb"
                 }
             ]
         },
