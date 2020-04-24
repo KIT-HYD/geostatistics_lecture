@@ -57,6 +57,13 @@ jobs:
         [ -d ./static ] && mv ./static/* ./dist/static/* 
         [ -f ./index.md ] && mv index.md ./dist/static/index.md
         #[ -d ./img ] && mv ./img ./dist/img
+
+    # copy the exercises
+    # TODO: maybe add all readme files
+    - name: Add Exercises
+      run: |
+        mv ./exercises/README.md ./lectures/dist/static/exercises.md
+
         
     - name: Deploy
       uses: crazy-max/ghaction-github-pages@v1
