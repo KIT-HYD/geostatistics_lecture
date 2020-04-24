@@ -4,17 +4,11 @@ This is the material repository for our 'Geostatistics' ([LV 6224805 on Campus M
 
 This repository is deploying the material to: https://kit-hyd.github.io/geostatistics_lecture
 
-You will find two child folders in the repository:
+In the Github repository, you will find two child folders:
 
-* [exercises](https://github.com/KIT-HYD/geostatistics_lecture/tree/master/exercises) for the tutorial sessions
-* [lectures](https://github.com/KIT-HYD/geostatistics_lecture/tree/master/lectures) with all presentations contained.
+* [exercises](https://github.com/KIT-HYD/geostatistics_lecture/tree/master/exercises) to practice at home
+* [lecture notebooks](https://github.com/KIT-HYD/geostatistics_lecture/tree/master/lectures) for installation at home
 
-## Lectues on NB Viewer
-
-There is also the possibility to open the lecture slides on nbviewer.jupyter.org directly. 
-
-* [Lecture Overview](https://nbviewer.jupyter.org/format/slides/github/KIT-HYD/geostatistics_lecture/blob/master/lectures/01_overview.ipynb)
-* [Introduction](https://nbviewer.jupyter.org/format/slides/github/KIT-HYD/geostatistics_lecture/blob/master/lectures/02_introduction.ipynb)
 
 ## Get the files
 

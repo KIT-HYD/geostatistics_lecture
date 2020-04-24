@@ -1,7 +1,7 @@
 # Geostatistics lecture
 
 ## Introduction
-You can use this folder to solve all tasks and exercises of our 'Geostatistics' ([LV 6224805 on Campus Management](https://campus.studium.kit.edu/ev/sX1tBPZfRJe44X27sWBPWg/de)) lecture. Each exercise/task is contained in one folder with at least a `README.md` file in it, which contains more information. 
+You can use this page to solve all tasks and exercises of our 'Geostatistics' ([LV 6224805 on Campus Management](https://campus.studium.kit.edu/ev/sX1tBPZfRJe44X27sWBPWg/de)) lecture. Each exercise/task is contained in one folder with at least a `README.md` file in it, which contains more information. 
 
 The exercises in this directory are not mandatory, but it is highly recommended 
 to solve them to be able to pass the class. Note that this folder only contains

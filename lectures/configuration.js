@@ -1,6 +1,7 @@
 var Config ={
     title: "Geostatistics",
     url: "https://kit-hyd.github.io/geostatistics_lecture",
+    homeUrl: "https://github.com/KIT-HYD/geostatistics_lecture",
     navigation: [
         {
             label: "Home",
