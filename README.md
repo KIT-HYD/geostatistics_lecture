@@ -2,6 +2,8 @@
 
 This is the material repository for our 'Geostatistics' ([LV 6224805 on Campus Management](https://campus.studium.kit.edu/ev/sX1tBPZfRJe44X27sWBPWg/de)) lecture.
 
+This repository is deploying the material to: https://kit-hyd.github.io/geostatistics_lecture
+
 You will find two child folders in the repository:
 
 * [exercises](https://github.com/KIT-HYD/geostatistics_lecture/tree/master/exercises) for the tutorial sessions
