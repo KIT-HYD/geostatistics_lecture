@@ -5,7 +5,7 @@ name: Notebook-Classrom
 # Only run on push to the master branch
 on: 
   push:
-    branches: [ master ]
+    branches: [ master, patch-exercises ]
   schedule:
     # change this as you need it: https://help.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events-schedule
     # runs at 1:30 on saturday
