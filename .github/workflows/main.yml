@@ -63,7 +63,7 @@ jobs:
     - name: Add Exercises
       run: |
         mv ./exercises/README.md ./lectures/dist/static/exercises.md
-        zip -r ./lectures/dist/static/exercises.zip ./excercises
+        zip -r ./lectures/dist/static/exercises.zip ./exercises
 
         
     - name: Deploy
