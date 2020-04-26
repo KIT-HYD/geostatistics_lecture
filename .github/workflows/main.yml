@@ -57,7 +57,7 @@ jobs:
         [ -d ./static ] && mv ./static/* ./dist/static/* 
         [ -f ./index.md ] && mv index.md ./dist/static/index.md
         # append the date to index.md
-        python -c "from datetime import datetime as dt;print('\n## Last Update\n\n```\n%s\n```' % dt.now())" >> ./dist/static/index.md
+        python -c "from datetime import datetime as dt;print('\n## Last Update\n\n  %s\n' % dt.now())" >> ./dist/static/index.md
 
     # copy the exercises
     # TODO: maybe add all readme files
