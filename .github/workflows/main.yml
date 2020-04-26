@@ -56,7 +56,8 @@ jobs:
         mv configuration.js ./dist/configuration.js
         [ -d ./static ] && mv ./static/* ./dist/static/* 
         [ -f ./index.md ] && mv index.md ./dist/static/index.md
-        #[ -d ./img ] && mv ./img ./dist/img
+        # append the date to index.md
+        echo "##Last Update\n```\n" + date + "```" >> ./dist/static/index.md 
 
     # copy the exercises
     # TODO: maybe add all readme files
