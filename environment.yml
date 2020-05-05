@@ -1,6 +1,7 @@
 name: geostat
 channels:
     - defaults
+    - conda-forge
 dependencies:
     - python=3.7
     - pandas
@@ -10,6 +11,9 @@ dependencies:
     - bokeh=1.4.0
     - plotly
     - holoviews
+    - selenium
+    - phantomjs
+    - statsmodels
     - pip:
         - jupyter_contrib_nbextensions
         - rise==5.6.1
