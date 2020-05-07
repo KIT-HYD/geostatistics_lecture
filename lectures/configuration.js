@@ -32,12 +32,16 @@ var Config ={
                     link: "05_spatial.slides.html"
                 },
                 {
+                    label: "Excursus: IDW",
+                    link: "06_idw.slides.html"
+                },
+                {
                     label: "Variogram Models",
-                    link: "06_variograms.slides.html"
+                    link: "07_variograms.slides.html"
                 },
                 {
                     label: "Kriging",
-                    link: "07_kriging.slides.html"
+                    link: "08_kriging.slides.html"
                 }
             ]
         },
@@ -65,14 +69,19 @@ var Config ={
                     binder: "https://mybinder.org/v2/gh/KIT-HYD/geostatistics_lecture/master?filepath=lectures%2F05_spatial.ipynb"
                 },
                 {
+                    label: "Excursus: IDW"
+                    link: "06_idw.html",
+                    binder: "https://mybinder.org/v2/gh/KIT-HYD/geostatistics_lecture/master?filepath=lectures%2F06_idw.ipynb"
+                },
+                {
                     label: "Variogram Models",
-                    link: "06_variograms.html",
-                    binder: "https://mybinder.org/v2/gh/KIT-HYD/geostatistics_lecture/master?filepath=lectures%2F06_variograms.ipynb"
+                    link: "07_variograms.html",
+                    binder: "https://mybinder.org/v2/gh/KIT-HYD/geostatistics_lecture/master?filepath=lectures%2F07_variograms.ipynb"
                 },
                 {
                     label: "Kriging",
-                    link: "07_kriging.html",
-                    binder: "https://mybinder.org/v2/gh/KIT-HYD/geostatistics_lecture/master?filepath=lectures%2F07_kriging.ipynb"
+                    link: "08_kriging.html",
+                    binder: "https://mybinder.org/v2/gh/KIT-HYD/geostatistics_lecture/master?filepath=lectures%2F08_kriging.ipynb"
                 }
             ]
         },
