@@ -69,7 +69,7 @@ var Config ={
                     binder: "https://mybinder.org/v2/gh/KIT-HYD/geostatistics_lecture/master?filepath=lectures%2F05_spatial.ipynb"
                 },
                 {
-                    label: "Excursus: IDW"
+                    label: "Excursus: IDW",
                     link: "06_idw.html",
                     binder: "https://mybinder.org/v2/gh/KIT-HYD/geostatistics_lecture/master?filepath=lectures%2F06_idw.ipynb"
                 },
