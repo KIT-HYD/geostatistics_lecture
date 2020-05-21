@@ -67,8 +67,8 @@ jobs:
         zip -r ./lectures/dist/static/exercises.zip ./exercises
     
     # add Project files
-    - name: Add Project files
-      run: mv ./projects/* ./lectures/dist/static/*
+#    - name: Add Project files
+#      run: mv ./projects/* ./lectures/dist/static/*
 
         
     - name: Deploy
