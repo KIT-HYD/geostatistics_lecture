@@ -90,6 +90,51 @@ var Config ={
             link: "exercises.md",
             type: "static"
         },
+		{
+			label: "Projects",
+			navigation: [
+			{
+				label: "Projects Overview",
+				link: "README.md",
+				type: "static"
+			},
+			{
+				label: "1 - Apply Kriging",
+				link: "01_meuse_interpolation.md",
+				type: "static"
+			},
+			{
+				label: "2 - Estimators and Models",
+				link: "02_estimators_models.md",
+				type: "static"
+			},
+			{
+				label: "3 - Random Fields",
+				link: "03_random_field.md",
+				type: "static"
+			},
+			{
+				label: "4 - Kriging Matrix",
+				link: "04_kriging_matrix.md",
+				type: "static"
+			},
+			{
+				label: "5 - Spatio-Temporal Geostatistics",
+				link: "05_spatio_temporal.md",
+				type: "static"
+			},
+			{
+				label: "6 - Sampling Strategies",
+				link: "06_sampling.md",
+				type: "static"
+			},
+			{
+				label: "7 - CAOS",
+				link: "07_caos.md",
+				type: "static"
+			}
+			]
+		},
         {
             label: "About",
             link: "about.md",
