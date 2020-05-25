@@ -3,9 +3,7 @@
 | group size | 1 - 3 persons   |
 |------------|-----------------|
 | difficulty | medium          |
-|------------|-----------------|
 | material   | https://github.com/KIT-HYD/geostatistics_lecture/tree/master/lectures/data  |
-|------------|-----------------|
 
 ## Description
 

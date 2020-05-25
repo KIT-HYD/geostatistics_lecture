@@ -3,9 +3,7 @@
 | group size | individual work |
 |------------|-----------------|
 | difficulty | medium          |
-|------------|-----------------|
 | material   | -               |
-|------------|-----------------|
 
 ## Description
 

@@ -3,9 +3,7 @@
 | group size | individual work |
 |------------|-----------------|
 | difficulty | really easy     |
-|------------|-----------------|
 | material   | meuse data      |
-|------------|-----------------|
 
 ## Description
 

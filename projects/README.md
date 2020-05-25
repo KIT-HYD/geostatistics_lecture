@@ -8,7 +8,7 @@ In each project description you will find a statement about the number of people
 on the project:
 
 * _individual work_: You have to solve the project on your own
-* _1 - 3_: These projects are solvable alone, but that might be a lot of work. So you can group up to 3 peoply
+* _1 - 3_: These projects are solvable alone, but that might be a lot of work. So you can group up to 3 people
 * _>3_: These projects are more work and you should at least be three
 
 Each project files includes a statement about the difficulty. In case you choose a `very easy` or 
