@@ -3,9 +3,7 @@
 | group size | individual work |
 |------------|-----------------|
 | difficulty | easy            |
-|------------|-----------------|
 | material   | https://github.com/KIT-HYD/geostatistics_lecture/tree/master/lectures/data |
-|------------|-----------------|
 
 ## Description
 
