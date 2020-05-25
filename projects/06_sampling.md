@@ -1,11 +1,9 @@
-# Project 1: Sampling
+# Project 6: Sampling
 
 | group size |    1 - 3        |
 |------------|-----------------|
 | difficulty |      medium     |
-|------------|-----------------|
-| material   | https://github.com/KIT-HYD/geostatistics_lecture/tree/master/lectures/data/field3       |
-|------------|-----------------|
+| material   | https://github.com/KIT-HYD/geostatistics_lecture/tree/master/lectures/data/field3  |
 
 ## Description
 
