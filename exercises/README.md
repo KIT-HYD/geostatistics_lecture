@@ -42,15 +42,4 @@ please read the [instructions](https://github.com/KIT-HYD/geostatistics_lecture/
 
 ## Solutions
 
-My solutions to all given tasks can be found on the soultions branch. 
-The links are given in the table below, or just change the branch on Github directly 
-to browse the contents. 
-
-| Exercise | Solution |
-|----------|----------|
-| 01 - IDW | [idw folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/solutions/idw) |
-| 02 - Univariate Statistics | [univariate folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/solutions/univariate) |
-| 03 - Multivariate Statistics | [distance folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/solutions/distance) |
-| 04 - Variograms | [variogram folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/solutions/variogram) |
-| 05 - Variogram models | [fitting folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/solutions/fitting) |
-| 06 - Kriging | [kriging folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/solutions/kriging) |
+My solutions to all given tasks can be found in the [`/exercise_soultions/` folder](https://github.com/KIT-HYD/geostatistics_lecture/tree/master/exercises_solutions).
