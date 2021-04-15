@@ -1,0 +1,14 @@
+pandas
+scipy
+matplotlib
+jupyter
+bokeh
+plotly
+holoviews
+selenium
+phantomjs
+statsmodels
+jupyter_contrib_nbextensions
+rise
+scikit-gstat
+colorcet
