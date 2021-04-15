@@ -1,11 +1,9 @@
-# Project 2: Using other estimators
+# Project 7: CAOS dataset
 
 | group size |       > 3       |
 |------------|-----------------|
 | difficulty | difficult       |
-|------------|-----------------|
 | material   |       -         |
-|------------|-----------------|
 
 ## Description
 

@@ -3,9 +3,7 @@
 | group size | individual work |
 |------------|-----------------|
 | difficulty | really easy     |
-|------------|-----------------|
 | material   | meuse data      |
-|------------|-----------------|
 
 ## Description
 
@@ -29,7 +27,7 @@ geostatistics and test developments. It is quite easy to load it in R as it is p
 ```R
 install.packages("sp")
 library(sp)
-data(sp)
+data(meuse)
 ```
 
 Then, you can solve the project in R or save the data to CSV and open it in Matlab/Python.

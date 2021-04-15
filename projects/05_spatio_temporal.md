@@ -1,11 +1,9 @@
 # Project 5: Spatio-Temporal Geostatistics
 
-| group size |     > 2         |
+| group size |     > 3         |
 |------------|-----------------|
 | difficulty |     hard        |
-|------------|-----------------|
 | material   | https://github.com/KIT-HYD/geostatistics_lecture/tree/master/lectures/data |
-|------------|-----------------|
 
 ## Description
 
