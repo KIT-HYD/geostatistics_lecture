@@ -22,7 +22,11 @@ You can download the files as a [ZIP archive](https://github.com/KIT-HYD/geostat
 The perefered way is to clone the full repository with the git cli:
 
 ```bash
+# old way
 git clone https://github/kit-hyd/geostatistics_lecture.git
+
+# better
+git clone git@github.com:kit-hyd/geostatistics_lecture.git
 ```
 
 If you want to run the lecture notebooks on your own computer, 
