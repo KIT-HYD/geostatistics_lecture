@@ -23,15 +23,15 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       
-    - name: Install Conda
-      uses: s-weigand/setup-conda@v1.0.2
+    - name: Setup Python
+      uses: actions/setup-python@v2.2.2
       with:
-        python-version: 3.6
+        python-version: 3.8
 
     # install requirements
     - name: Install requirements
       run: | 
-        conda env update -f environment.yml -n base
+        pip install -r requirements.txt
         
     # Compile notebooks
     - name: Compile Notebooks
