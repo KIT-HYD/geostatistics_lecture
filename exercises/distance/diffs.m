@@ -1,5 +1,5 @@
 function v=diffs(x)
-  % diffs Calculates the upper triangle of doff_matrix.m
+  % diffs Calculates the upper triangle of diff_matrix.m
   % 
   % For x of length N, an array of (N**2 - N) / 2 elements containing 
   % the row-wise ordered upper triangle of diff_matrix.m is 

@@ -7,7 +7,7 @@ X = data(:,2:3);
 %---------------
 dists = distance_matrix(X)
 max(dists(:))
-min(dists(dists > 0)(:))
+min(dists(dists > 0))
 
 % distances are between 750 and 3000 meter
 
@@ -18,6 +18,7 @@ hist(distances(X))
 
 %     C
 %---------------
-[c, e] = hist(distances(X), 4);
+n_classes = 4;                         % test different numbers
+[c, e] = hist(distances(X), n_classes);
 figure;
 bar(c);

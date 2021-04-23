@@ -1,7 +1,6 @@
 # Inverse distance weights
 
-This exercise is about inverse distance weights. You can upload one soultion as 
-a course group. 
+This exercise is about inverse distance weights. 
 
 ## Task 1
 

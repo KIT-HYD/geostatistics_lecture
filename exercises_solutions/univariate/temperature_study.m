@@ -3,15 +3,20 @@
 % -----------------------------------------------
 step = 0.1;
 n_steps = 2400;
+lambda= 24;
 
 % create two temeprature timeseries
 % first argument is the expectation value, second the amplitude
-y1 = synthetic_signal(22, 20, n_steps, step);
-y2 = synthetic_signal(19, 12, n_steps, step);
+y1 = synthetic_signal(22, 20, n_steps, step, lambda);
+y2 = synthetic_signal(19, 12, n_steps, step, lambda);
+
+% Calculate correlation coefficients of all combinations
+Rcoef = corrcoef(y1, y2);
+
 % -----------------------------------------------
 
 t = [0:step:step*n_steps-step];
-figure;
+% figure;
 ax1 = subplot(3,3, [1 2 3]);
 plot(t, y1, 'r--');
 hold on;
@@ -22,7 +27,7 @@ ylabel('Temperature [°C]');
 
 ax2 = subplot(3, 3 , [4 5 7 8]);
 plot(y1, y2, 'go'); 
-title(['Correlation of y1 and y2: ', num2str(corrcoef(y1, y2)(1,2))]);
+title(['Correlation of y1 and y2: ', num2str(Rcoef(1,2))]);
 xlabel('y1');
 ylabel('y2');
 

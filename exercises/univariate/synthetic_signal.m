@@ -1,4 +1,4 @@
-function y=synthetic_signal(m, amp, n_steps= 2400, t_step= 0.1, lambda= 24)
+function y=synthetic_signal(m, amp, n_steps, t_step, lambda)
   % sythetic_signal produce a sine based sythetic signal
   %
   %  Arguements

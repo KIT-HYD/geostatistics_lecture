@@ -1,6 +1,6 @@
 # Multivariate Statistics
 
-In this thrid lecture, we will shift from univariate statistics to multivariate statistics.
+In this third lecture, we will shift from univariate statistics to multivariate statistics.
 Here we will have a look into the special case of dependence on the distance between 
 observations. This is the most fundamental assumption of **geostatistics**. 
 We assume that proximity in space leads to proximity in value, or in other words:
@@ -37,7 +37,7 @@ If you want to test your function against working code use this snippet, which y
 exactly the same result:
 
 ```Matlab
-pkg load statistics  % octave only
+% pkg load statistics  % octave only
 squareform(pdist(X))
 ```
 
@@ -96,10 +96,12 @@ point pairs to the corresponding distance in value.
 
 ## Task 5
 
-Last but not least, we will formulate a more functional relationship between the 
+Last, but not least, we will formulate a more functional relationship between the 
 two distance measures formulated in the previous tasks. Calculate the arithmetic mean
 and variance (first and second univariate statistical moment)
 for each of the distance lag classes. Plot these relationships.
 
 Now consider the results from Task 4. Are these relationships sufficiently describing 
 the interconnection of proximity in distance and proximity in value? 
+
+

@@ -8,7 +8,7 @@ function v = inverse_distance_fixed_radius(xi, yi, vi, x, y, r)
   %  xi,yi  Coordinate arrays (1D)
   %  vi     Value array for all [xi, yi]
   %  x, y   Coordinates for the point of interese
-  %  r      Search radius in corrdinate system units
+  %  r      Search radius in coordinate system units
   %
   %  Returns
   %  -------
@@ -17,7 +17,7 @@ function v = inverse_distance_fixed_radius(xi, yi, vi, x, y, r)
   
   % check radius
   if r <= 0
-    error('the raidus has to be positive');
+    error('The radius has to be positive');
   end
   
   % check corrdinate arrays

@@ -1,15 +1,15 @@
 # Univariate statistics
 
-This exercise is a short collection of important metrics, concepts and tools
-needed to dive into geostatistics. 
+This exercise is a collection of important metrics, concepts and tools
+that are helpful to dive into geostatistics. 
 
-*Note:* These tasks are most fun when you split up into two groups and run 
+*Note:* These tasks are even more fun when you split up into two groups and run 
 task 2 against the code of the other group.
 
 ## Task 1
 
 Matlab/Octave are great as they offer a lot of pre-built functions. Especially 
-for statistics. Calculating a arithmetric mean, standard deviation, variance and 
+for statistics. Calculating a arithmetic mean, standard deviation, variance and 
 a histogram of the sample stored in an array `x` is as easy as:
 
 ```Matlab
@@ -22,7 +22,7 @@ hist(x, 25)
 But what have you actually done? Do you know that? What is the variance or mean?
 Easy? Then reprogramm it.
 There are 4 files with a prepared function. Remove the call to the generic
-Octave function with your own code.
+Matlab/Octave function with your own code.
 
 ## Task 2
 
@@ -97,8 +97,8 @@ each one on the correlation between both?
 ## Task 5
 
 In task 4, the correlation coefficient between the two time series is calculated.
-Now, write a new script or function that will take only one the series. Duplicate the 
-series and and *shift* it by one element. That means, take the first element of the 
+Now, write a new script or function that will take only one of the series. Duplicate the 
+series and *shift* it by one element. That means, take the first element of the 
 array and push it to the end. Then the formerly second element should be the first now.
 You call this a **lag** of 1.
 
@@ -106,7 +106,7 @@ You call this a **lag** of 1.
 What is the correlation coefficient now? Did it change significantly?
 
 ### b)
-Repeat the precedure for a lag of 10, 100, and 500.
+Repeat the procedure for a lag of 10, 100, and 500.
 
 ### c)
 Repeat the procedure for all lags: 1, 2, 3, ... N-1 and plot the resulting 

@@ -1,5 +1,5 @@
 %% sampling.m
-pkg load statistics
+% Statistics Toolbox is needed for function randsample
 
 % synthetic soil moisture dataset
 soil_moisture = randn(500000,1) .* 5 + 25;
@@ -17,7 +17,8 @@ bar(count);
 title('Soil moisture');
 
 %% PUT YOUR CODE HERE
-% randsample is the Octave function, as datasample is not yet implemented
+% randsample is the Octave function, also available in Matlab 
+%   datasample in Matlab would work, too
 
 sampling_sizes = [15, 25, 50, 100, 1000, 5000, 50000];
 
@@ -28,7 +29,7 @@ sample_stds = ones(1, length(sampling_sizes));
 i = 1;
 for s=sampling_sizes
   % sample
-  samp = randsample(soil_moisture, s);
+  samp = randsample(soil_moisture, s);                  
   sample_means(i) = average(samp);
   sample_stds(i) = standard_deviation(samp);
   

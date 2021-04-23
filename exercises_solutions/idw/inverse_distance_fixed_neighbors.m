@@ -17,7 +17,7 @@ function v = inverse_distance_fixed_neighbors(xi, yi, vi, x, y, n)
   
   % check radius
   if n <= 0
-    error('the number of neighbors has to be positive');
+    error('The number of neighbors has to be positive');
   end
   
   % check corrdinate arrays
@@ -30,7 +30,7 @@ function v = inverse_distance_fixed_neighbors(xi, yi, vi, x, y, n)
   [sorted_d idx] = sort(d);
   d_in = sorted_d(1:n);
   
-  v = sum(vi(idx)(1:n) ./ d_in) / sum(ones(1, length(d_in)) ./ d_in );
+  v = sum(vi(idx(1:n)) ./ d_in) / sum(ones(1, length(d_in)) ./ d_in );
   
   % SOLUTION END
 end

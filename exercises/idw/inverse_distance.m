@@ -9,7 +9,7 @@ function vgrid = inverse_distance(xi, yi, vi, gridsize, method, arg)
   %  vi        Value array for all [xi, yi]
   %  gridsize  spatial resolution of the regular grid
   %  method    Can be either 1 (fixed radius) or 2 (fixed neighbors)
-  %  arg       method argument: either radius (mehtod=1) or n (method=2)
+  %  arg       method argument: either radius (method=1) or n (method=2)
   %
   %  Returns
   %  -------

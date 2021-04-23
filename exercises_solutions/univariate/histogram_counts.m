@@ -18,7 +18,7 @@ function [counts, centers] = histogram_counts(x, bins)
   counts = zeros(1, bins);                     % array for counts
   
   % check each element of x to be in a specific class
-  % the save the sum of matches
+  % then save the sum of matches
   for i=2:length(edges)
     counts(i -1) = sum( (x >= edges(i -1)) .* (x <= edges(i)) );
   end

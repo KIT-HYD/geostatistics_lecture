@@ -89,7 +89,7 @@ disp('Starting unit tests for histogram_counts.m');
 % Histogram test 1
 [co1, ce1] = hist(x1, 25);
 [cot1, cet1] = histogram_counts(x1, 25);
-if (sum(co1 .- cot1) < 25*sig) && (sum(ce1 .- cet1) < 25*sig) 
+if (sum(co1 - cot1) < 25*sig) && (sum(ce1 - cet1) < 25*sig) 
   disp('Histogram 1 is fine.');
 else
   error('Histogram test 1 failed.');
@@ -98,7 +98,7 @@ end
 % Histogram test 2
 [co2, ce2] = hist(x2, 100);
 [cot2, cet2] = histogram_counts(x2, 100);
-if (sum(co2 .- cot2) < 100*sig) && (sum(ce2 .- cet2) < 100*sig) 
+if (sum(co2 - cot2) < 100*sig) && (sum(ce2 - cet2) < 100*sig) 
   disp('Histogram 2 is fine.');
 else
   error('Histogram test 2 failed.');
@@ -107,7 +107,7 @@ end
 % Histogram test 3
 [co3, ce3] = hist(x3, 42);
 [cot3, cet3] = histogram_counts(x3, 42);
-if (sum(co3 .- cot3) < 42*sig) && (sum(ce3 .- cet3) < 42*sig) 
+if (sum(co3 - cot3) < 42*sig) && (sum(ce3 - cet3) < 42*sig) 
   disp('Histogram 3 is fine.');
 else
   error('Histogram test 3 failed.');

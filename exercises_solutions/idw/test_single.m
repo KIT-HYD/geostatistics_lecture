@@ -12,7 +12,7 @@ test1 = inverse_distance_fixed_radius(xi, yi, vi, 409, 555, 1000)
 if abs(test1 - 82.97) > sig
   error('test 1 failed')
 else
-  disp('test 1 successfull.')
+  disp('test 1 successful.')
 end
 
 % test 2
@@ -20,7 +20,7 @@ test2 = inverse_distance_fixed_radius(xi, yi, vi, 250, 250, 750)
 if abs(test2 - 81.72) > sig
   error('test 2 failed')
 else
-  disp('test 2 successfull.')
+  disp('test 2 successful.')
 end
 
 % test 3
@@ -28,7 +28,7 @@ test3 = inverse_distance_fixed_radius(xi, yi, vi, -500, -1500, 750)
 if abs(test3 - 72.1) > sig
   error('test 3 failed')
 else
-  disp('test 3 successfull.')
+  disp('test 3 successful.')
 end
 
 disp('testing inverse_distance_fixed_neighbors.m ...')
@@ -46,7 +46,7 @@ test5 = inverse_distance_fixed_neighbors(xi, yi, vi, 250, 250, 3)
 if abs(test5 - 80.01) > sig
   error('test 5 failed')
 else
-  disp('test 5 successfull.')
+  disp('test 5 successful.')
 end
 
 % test 6
@@ -54,7 +54,7 @@ test6 = inverse_distance_fixed_neighbors(xi, yi, vi, 409, 555, 5)
 if abs(test6 - 82.92) > sig
   error('test 6 failed')
 else
-  disp('test 6 successfull.')
+  disp('test 6 successful.')
 end
 
 

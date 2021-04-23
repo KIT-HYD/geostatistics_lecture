@@ -1,7 +1,7 @@
 function V=diff_matrix(x)
   % diff_matrix Calculates the pairwise differences of X
   % 
-  % Returns a lenght(X) by length(X) matrix of all pairwise 
+  % Returns a length(X) by length(X) matrix of all pairwise 
   % absolute differences of X
   %
   %  Arguments
@@ -10,7 +10,7 @@ function V=diff_matrix(x)
   %
   %  Returns
   %  -------
-  %  M matrix of shape (N, N) of all pairwise absoulte observation distances
+  %  M matrix of shape (N, N) of all pairwise absolute observation distances
  
   N = length(x);
   V = ones(N, N) * -1;  
