@@ -124,9 +124,9 @@ Use your best parameter set for the spherical model to interpolate the data in
 Test at least 10 different values for each variogram parameter, each within a range 
 of possible values (each of the 10 values should still yield a useful variogram).
 Judge the performance either by the interpolation result (visual inspection), or
-make a leave-of-out cross validation. 
+make a leave-one-out cross validation. 
 
-That means you will only run `ordinary_krige.m` for each observation in the sample. 
+That means you will run `ordinary_krige.m` for each observation in the sample. 
 Omit each point from the kriging but use its coordinates as x and y parameter. 
-Then the diviation of the real z to the one yielded by the function can be 
+Then the difference of the real z to the one yielded by the function can be 
 interpreted as an *interpolation error*.
