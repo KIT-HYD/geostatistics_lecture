@@ -24,7 +24,7 @@ The most common variogram model functions are:
 * exponential model
 * Gaussian model
 
-Implement each of as a Matlab/Octave function and use the *test_* scripts for 
+Implement each one as a Matlab/Octave function and use the *test_* scripts for 
 development. The definitions of the models can be found below
 
 ### Spherical model
@@ -41,9 +41,9 @@ development. The definitions of the models can be found below
 
 ### Range vs effective range
 
-Remind the difference between the model parameter *range*, denoted as **a** here, 
-and the effective range of the variogram (and the data) itself *r*. As you know from 
-lectures, a := r for a spherical a := r/3 for a exponential and a := r/2 for a Gaussian
+Remember the difference between the model parameter *range*, denoted as **a** here, 
+and the effective range of the variogram (and the data) itself *r*. As you know from the
+lectures, a := r for a spherical, a := r/3 for a exponential, and a := r/2 for a Gaussian
 model.
 
 ## Task 3
@@ -55,7 +55,7 @@ as function arguments. How do the three models differ?
 ## Task 4
 
 Can you find better / other parameters for the three models by 
-trail-and-error fitting? Copy your best guess for variogram parameters for each 
+trial-and-error fitting? Copy your best guess for variogram parameters for each 
 of the model into one table.
 
 ## Task 5
@@ -64,3 +64,5 @@ Use the build-in Matlab / Octave least-squares function to find the best
 variogram parameter set for each of the functions. Plot the fitted models as they 
 are your ultimate result. 
 How much do they differ from  your best guess? Did the machine beat you?
+
+

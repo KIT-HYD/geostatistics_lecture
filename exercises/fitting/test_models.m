@@ -8,7 +8,7 @@ sig = 0.01;
 if abs(spherical(0, 10, 10, 2) - 2) > sig 
   error('Test 1 failed');
 else
-  disp('Test 1 successfull!');
+  disp('Test 1 successful!');
 end
 
 % Test 2
@@ -16,7 +16,7 @@ end
 if abs(spherical(15, 15, 10, 0) - 9.5) > 0.5 + sig
   error('Test 2 failed');
 else
-  disp('Test 2 successfull!');
+  disp('Test 2 successful!');
 end
 
 % Test 3
@@ -24,7 +24,7 @@ end
 if abs(spherical(10, 20, 10, 4) - 10.88) > sig
   error('Test 3 failed');
 else
-  disp('Test 3 successfull!');
+  disp('Test 3 successful!');
 end
 
 % EXPONENTIAL
@@ -33,7 +33,7 @@ end
 if abs(exponential(0, 10, 10, 2) - 2) > sig 
   error('Test 4 failed');
 else
-  disp('Test 4 successfull!');
+  disp('Test 4 successful!');
 end
 
 % Test 5
@@ -41,7 +41,7 @@ end
 if abs(exponential(15, 15, 10, 0) - 9.5) > 0.5 + sig
   error('Test 5 failed');
 else
-  disp('Test 5 successfull!');
+  disp('Test 5 successful!');
 end
 
 % Test 6
@@ -49,16 +49,16 @@ end
 if abs(exponential(10, 20, 10, 4) - 11.77) > sig
   error('Test 6 failed');
 else
-  disp('Test 6 successfull!');
+  disp('Test 6 successful!');
 end
 
-% GAUSIIAN
+% GAUSSIAN
 % Test 7
 % At lag 0, the nugget should be returned
 if abs(gaussian(0, 10, 10, 2) - 2) > sig 
   error('Test 7 failed');
 else
-  disp('Test 7 successfull!');
+  disp('Test 7 successful!');
 end
 
 % Test 8
@@ -66,7 +66,7 @@ end
 if abs(gaussian(15, 15, 10, 0) - 9.5) > 0.5 + sig
   error('Test 8 failed');
 else
-  disp('Test 8 successfull!');
+  disp('Test 8 successful!');
 end
 
 % Test 9
@@ -74,5 +74,5 @@ end
 if abs(gaussian(10, 20, 10, 4) - 10.32) > sig
   error('Test 9 failed');
 else
-  disp('Test 9 successfull!');
+  disp('Test 9 successful!');
 end

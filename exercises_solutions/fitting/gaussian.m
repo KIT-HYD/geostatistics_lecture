@@ -20,5 +20,5 @@ function gamma=gaussian(h, r, C0, b)
   %gamma = 0.42 * C0;
   % TO HERE
   a = r / 2.;
-  gamma = b + C0 * (1. - exp(-(h^2 / a^2)) );
+  gamma = b + C0 * (1. - exp(-(h.^2 / a^2)) );
 end

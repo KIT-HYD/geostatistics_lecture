@@ -30,14 +30,14 @@ gamma_gaus = gaussian(h, r_g, C0_g, b_g);
 
 %%--------------------------------
 % define lower, upper bound and initial guess for parameters
-lo = [30, 0.001, 0];                        % lower bounds; 
-hi = [max(bins), max(gamma), max(gamma)];   % upper bounds
-x0 = [mean(bins) mean(gamma) 0];            % starting parameters
+lo = [30, 0.001, 0];    % lower bounds, use 30 for r, otherwise nugget effect vars. are found
+hi = [max(bins), max(gamma), max(gamma)];
+x0 = [mean(bins) mean(gamma) 0];
 
 % wrap the models in an anonymous function for fitting (see 'help lsqcurvefit' 
-sph =  @(param, bins) spherical(bins, param(1), param(2), param(3));
-expo = @(param, bins) exponential(bins, param(1), param(2), param(3));
-gaus = @(param, bins) gaussian(bins, param(1), param(2), param(3));
+sph =  @(param, bins)spherical(bins, param(1), param(2), param(3));
+expo = @(param, bins)exponential(bins, param(1), param(2), param(3));
+gaus = @(param, bins)gaussian(bins, param(1), param(2), param(3));
 
 % optimize parameters using least squares
 param_s = lsqcurvefit(sph, x0, bins, gamma, lo, hi)
@@ -58,7 +58,7 @@ plot(h, gamma_sph, 'DisplayName', 'spherical');
 plot(h, gamma_exp, '-g', 'DisplayName', 'exponential');
 plot(h, gamma_gaus, '-r', 'DisplayName', 'gaussian');
 hold off;
-legend('Location', 'southeast', 'Orientation', 'vertical');
+legend('Location', 'southeast', 'Orientation', 'horizontal');
 title('Manual fit');
 
 subplot(1,2,2);
@@ -68,5 +68,5 @@ plot(h, gamma_opt_sph, 'DisplayName', 'spherical');
 plot(h, gamma_opt_exp, '-g', 'DisplayName', 'exponential');
 plot(h, gamma_opt_gaus', '-r', 'DisplayName', 'gaussian');
 hold off;
-legend('Location', 'southeast', 'Orientation', 'vertical');
+legend('Location', 'southeast', 'Orientation', 'horizontal');
 title('Least squares fit');
