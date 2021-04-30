@@ -1,43 +1,37 @@
 % Task 3
 
-% parameters:
+% parameters: number of bins, can be varied
 n_classes = 10;
-%
-data = dlmread('artificial.csv', ',');
-X = data(:,1:2);
-values = data(:,3);
+
+% read 'artificial' data
+datav2 = readmatrix('artificial.csv');
+X2 = datav2(:,1:2);
+values2 = datav2(:,3);
 
 % calculate the distance matrix array for the coordinates and values
-d = distances(X);
-v = diffs(values);
+d2 = distances(X2);
+v2 = diffs(values2);
 
 % get the  maximum distance
-maxd = max(d)
+maxd2 = max(d2);
 
-bins = linspace(0, maxd, n_classes + 1);
+% edges of bins (one more than bins)
+edges2 = linspace(0, maxd2, n_classes + 1);
 
-% calculate
-gamma_m = ones(1, n_classes) * NaN;
-gamma_c = ones(1, n_classes) * NaN;
+% calculate using the matheron estimator _m 
+gamma_m2 = ones(1, n_classes) * NaN;
 
-for i=2:length(bins)
-  samp = v((d > bins(i - 1)) & (d <= bins(i)));
+for i=2:length(edges2)
+  samp = v2((d2 > edges2(i - 1)) & (d2 <= edges2(i)));
   if length(samp) > 1
-    gamma_m(i -1) = matheron(samp);
-    gamma_c(i -1) = cressie(samp);
+    gamma_m2(i -1) = matheron(samp);
   end
 end
 
-% plot
-figure;
-subplot(1,2,1);
-plot(bins(2:n_classes + 1), gamma_m, 'o-r');
+%% plot
+%figure;
+plot(edges2(2:n_classes + 1), gamma_m2, 'o-r');
 title('Matheron');
 xlabel('lag');
 ylabel('semi-variance');
 
-subplot(1,2,2);
-plot(bins(2:n_classes + 1), gamma_c, 'o-r');
-title('Cressie');
-xlabel('lag');
-ylabel('semi-variance');
