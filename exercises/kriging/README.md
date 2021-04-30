@@ -1,12 +1,12 @@
 # Kriging
 
-In this last exercise we will focus Kriging interpolation. In the kriging folder, 
+In this last exercise we will focus on Kriging interpolation. In the kriging folder, 
 you will find a `kriging.m` function. It basically works just like the 
-`inverse_distance.m` function of the first exercerise. Only a few function arguments
+`inverse_distance.m` function of the first exercise. Only a few function arguments
 changed. The `kriging.m` function will create the interpolation grid and apply 
 another function, `ordinary_krige.m` to each of the grid cells, just like the IDW
 implementation. 
-This way, it would be possible to to call the different IDW variants and the kriging 
+This way, it is possible to call the different IDW variants and the kriging 
 from within the same function.
 
 **Note:** This exercise is extensive. Solve tasks 1 - 5 and choose **one** of the 
@@ -24,7 +24,7 @@ Apply the `inverse_distance.m` function from the first exercise, choose comparab
 parameters and plot both examples next to each other. 
 
 * Describe the differences between the results.
-* Was this lecture worth it? Does Kriging produce the better results here?
+* Was this effort worth it? Does Kriging produce the better results here?
 
 ## Task 3
 
@@ -73,7 +73,7 @@ This check doesn't make any sense. Why not?
 It was intended to use the range parameter as a search distance to find neighboring 
 points for an interpolation (`x_in`, `y_in`, `z_in`). Then, the `max_p` parameter
 should limit the points to be used *inside* this radius and the check above 
-should yield a `NaN` if there are not enough points found.
+should give `NaN` if there are not enough points found.
 Implement this solution
 
 ### Task 5 c)
@@ -91,7 +91,7 @@ differences.
 
 ## Task 7
 
-Use any of the kriging interpolations you performed so far. Changeing the `max_p` 
+Use any of the kriging interpolations you performed so far. Changing the `max_p` 
 and `min_p` parameters can be utilized to speed up the calculations, while yielding 
 essentially the same results. 
 How small can both parameters get until the results are substantially different?
