@@ -19,8 +19,9 @@ function [counts, centers] = histogram_counts(x, bins)
   
   % check each element of x to be in a specific class
   % then save the sum of matches
-  for i=2:length(edges)
-    counts(i -1) = sum( (x >= edges(i -1)) .* (x <= edges(i)) );
+  counts(1) =  sum( (x <= edges(2)) )               % first bin contains everything smaller or equal to second 'edge'
+  for i=3:length(edges)
+    counts(i -1) = sum( (x > edges(i -1)) .* (x <= edges(i)) );   % values at edge get sorted to the bin with lower i
   end
   % SOLUTION END
 end
