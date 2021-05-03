@@ -47,8 +47,8 @@ disp('done!');
 disp('plotting ...');
 subplot(1,2,1);
 
-% image with coordinates  - for plotting of points
- krigim = image([min(xi), max(xi)], [min(yi), max(yi)], res.*1024);
+% scaled image, with coordinates for plotting of points
+ krigim = imagesc([min(xi), max(xi)], [min(yi), max(yi)], res.*1024);
  colormap(parula(2048));
   % set NaN values to transparent
   krigim.AlphaData= ~isnan(krigim.CData);  
@@ -59,7 +59,7 @@ subplot(1,2,1);
      hold off   
 
 subplot(1,2,2);
-idwim = image([min(xi), max(xi)], [min(yi), max(yi)], idw.*1024);
+idwim = imagesc([min(xi), max(xi)], [min(yi), max(yi)], idw.*1024);
 colormap(parula(2048));
  % set NaN values to transparent
  idwim.AlphaData= ~isnan(idwim.CData);  

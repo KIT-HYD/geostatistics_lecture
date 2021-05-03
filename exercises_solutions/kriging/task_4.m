@@ -40,13 +40,13 @@ disp('done!');
 % figure;
 disp('plotting ...');
 subplot(1,2,1);
-image(my_res.*1024);
+imagesc(my_res.*1024);
 colormap(parula(2048));
 
 title(sprintf('range: %.2f  sill: %.2f   nugget: %.1f', my_range, my_sill, my_nugget));
 
 % 
 subplot(1,2,2);
-image(lsq_res.*1024);
+imagesc(lsq_res.*1024);
 colormap(parula(2048));
 title(sprintf('range: %.2f  sill: %.2f   nugget: %.1f', lsq_range, lsq_sill, lsq_nugget));

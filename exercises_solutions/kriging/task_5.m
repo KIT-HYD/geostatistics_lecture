@@ -35,7 +35,7 @@ disp('done!');
 % figure;
 
 % image 
- krigim = image(res.*1024);
+ krigim = imagesc(res.*1024);
  colormap(parula(2048));
      % set NaN values to transparent
      krigim.AlphaData= ~isnan(krigim.CData);  
