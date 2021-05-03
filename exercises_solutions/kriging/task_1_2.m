@@ -53,10 +53,10 @@ subplot(1,2,1);
   % set NaN values to transparent
   krigim.AlphaData= ~isnan(krigim.CData);  
  title('Kriging result');
- % plot points on top
- hold on;
- plot(xi, yi, '+c')
- hold off   
+     % plot points on top
+     hold on;
+     plot(xi, yi, '+c')
+     hold off   
 
 subplot(1,2,2);
 idwim = image([min(xi), max(xi)], [min(yi), max(yi)], idw.*1024);

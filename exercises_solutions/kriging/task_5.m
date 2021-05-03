@@ -25,26 +25,22 @@ max_p = 10;
 
 %% -----------------------------
 
-% apply the function
+% apply the function 'kriging_with_minp'
 disp('Start kriging with minp...');
 res = kriging_with_minp(xi, yi, zi, gridsize, model, range, sill, nugget, min_p, max_p);
 disp('done!');
 
 
 %% plot
-
 % figure;
 
-% image with coordinates  - for plotting of points
- krigim = image([min(xi), max(xi)], [min(yi), max(yi)], res.*1024);
+% image 
+ krigim = image(res.*1024);
  colormap(parula(2048));
      % set NaN values to transparent
      krigim.AlphaData= ~isnan(krigim.CData);  
  title('Kriging result with minp');
- % plot points on top
-     hold on;
-     plot(xi, yi, '+c')
-     hold off 
+
  disp('plotting done ...');
 
 
