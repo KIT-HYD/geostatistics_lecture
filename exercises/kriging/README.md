@@ -3,7 +3,7 @@
 In this last exercise we will focus on Kriging interpolation. In the kriging folder, 
 you will find a `kriging.m` function. It basically works just like the 
 `inverse_distance.m` function of the first exercise. Only a few function arguments
-changed. The `kriging.m` function will create the interpolation grid and apply 
+have changed. The `kriging.m` function will create the interpolation grid and apply 
 another function, `ordinary_krige.m` to each of the grid cells, just like the IDW
 implementation. 
 This way, it is possible to call the different IDW variants and the kriging 
@@ -14,8 +14,8 @@ remaining tasks.
 
 ## Task 1
 
-Apply the `kriging.m` routine to the observations in `artificial.csv`. To speed the 
-calculations up, set the `max_p` parameter to 10. Use a gridsize of 1 (meter) and
+Apply the `kriging.m` routine to the observations in `artificial.csv`. To speed up the 
+calculations, set the `max_p` parameter to 10. Use a gridsize of 1 (meter) and
 use your best guess for a spherical model from the last exercise.
 
 ## Task 2
@@ -24,11 +24,11 @@ Apply the `inverse_distance.m` function from the first exercise, choose comparab
 parameters and plot both examples next to each other. 
 
 * Describe the differences between the results.
-* Was this effort worth it? Does Kriging produce the better results here?
+* Was it worth the effort? Does Kriging produce the better results here?
 
 ## Task 3
 
-In task 1 it was stated that the `max_p` parameter will substantially speed up the 
+In task 1 it was stated that limiting the `max_p` parameter will substantially speed up the 
 processing time. Why?
 
 ## Task 4 
@@ -66,7 +66,7 @@ In the code of `ordinary_krige.m` you will find the code:
 
 ### Task 5 a)
 
-This check doesn't make any sense. Why not?
+This check does not make much sense here. Why?
 
 ### Task 5 b)
 
@@ -74,11 +74,11 @@ It was intended to use the range parameter as a search distance to find neighbor
 points for an interpolation (`x_in`, `y_in`, `z_in`). Then, the `max_p` parameter
 should limit the points to be used *inside* this radius and the check above 
 should give `NaN` if there are not enough points found.
-Implement this solution
+Implement this solution.
 
 ### Task 5 c)
 
-Introduce a `min_p` parameter that replaces the hard-coded 4 in the check.
+Also introduce a `min_p` parameter that replaces the hard-coded 4 in the check.
 
 <hr>
 
@@ -117,7 +117,7 @@ the same shape as the interpolation grid. The function will return
 
 ## Task 10
 
-*Note: This task is more difficult than the others.*
+*Note: This task has higher difficulty.*
 
 Use your best parameter set for the spherical model to interpolate the data in 
 `artifical.csv`. Conduct a small sensitivity analysis for the variogram parameters.

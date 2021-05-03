@@ -44,30 +44,37 @@ function z=ordinary_krige(xi, yi, zi, x, y, variogram, range, sill, nugget, max_
   % if not enough points are found, return NaN
   if n < 4
     z = NaN
+    disp('not enough points'); 
     return 
   end
   % TO HERE
+%% % build the kriging matrix
   
-  % build the kriging matrix
-  D = squareform(pdist([x_in y_in]));
-  
-  % map distances to semi-variances
-  wrapper = @(h) variogram(h, range,sill,nugget); 
-  A = arrayfun(wrapper, D);
-  
+% map distances to semi-variances using the function handle in 'variogram' 
+  D = pdist([x_in y_in]);
+  A = variogram(D, range,sill,nugget);
+  A = squareform(A);                        % make square matrix of semivars
+
   % append row and col of ones
-  A = [A; repmat(1, 1, n)];
-  A = [A repmat(1, n+1, 1)];
+  A = [A; ones(1, n)];
+  A = [A ones(n+1, 1)];
   A(n + 1, n + 1) = 0;
   
   % construct B, 
   % get the distance to POI
-  d_poi = pdist([[x; x_in] [y; y_in]])(1:n);
-  B = [arrayfun(wrapper, d_poi) 1];
+  d_poi = pdist([[x; x_in] [y; y_in]]);
+  d_poi = d_poi(1:n);
+  B = [variogram(d_poi, range,sill,nugget) 1];
   
-  % solve the linear equation system of A and right side of B
-  w = linsolve(A.', B.'); 
+% solve the linear equation system of A and right side of B
+   w = A\B';
+
+% the estimate is the dot product of the weights and the values
+   z = w(1:n)' * z_in;       % or %  z = dot(w(1:n), z_in);
   
-  % the estimate is the dot product of the weights and the values
-  z = dot(w(1:n), z_in);
+% Check for NaN (occurs with duplicate rows in input data)
+  if isnan(z)
+      disp('NaN value found')
+  end
+  
 end

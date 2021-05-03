@@ -23,13 +23,13 @@ function z=ordinary_krige_with_minp(xi, yi, zi, x, y, variogram, range, sill, nu
   %  z           double, the interpolated value
   %
   N = length(xi);
-  if N != length(yi) || N != length(zi)
+  if N ~= length(yi) || N ~= length(zi)
     error('Input data has to be of same dimension');
   end
   
   % get the max_p closest neighbors
   d = sqrt((xi -x).^2 + (yi - y).^2);
-  [sorted_d idx] = sort(d);
+  [sorted_d, idx] = sort(d);
   
   % PLACE YOUR ARGUMENT BASED SOLUTION HERE  
   % get the distances and the index of points to be used
@@ -40,7 +40,6 @@ function z=ordinary_krige_with_minp(xi, yi, zi, x, y, variogram, range, sill, nu
     z = NaN;
     return
   elseif length(d_in) > max_p
-    d_in = sorted_d(1:max_p);
     idx_in = idx(1:max_p);
   end
   
@@ -57,7 +56,8 @@ function z=ordinary_krige_with_minp(xi, yi, zi, x, y, variogram, range, sill, nu
   end
   % TO HERE
   
-  % build the kriging matrix
+  %% build the kriging matrix
+  % code is bit different from ordinary_krige.m, but does basically the same
   D = squareform(pdist([x_in y_in]));
   
   % map distances to semi-variances
@@ -65,13 +65,14 @@ function z=ordinary_krige_with_minp(xi, yi, zi, x, y, variogram, range, sill, nu
   A = arrayfun(wrapper, D);
   
   % append row and col of ones
-  A = [A; repmat(1, 1, n)];
-  A = [A repmat(1, n+1, 1)];
+  A = [A; ones(1, n)];
+  A = [A ones(n+1, 1)];
   A(n + 1, n + 1) = 0;
   
   % construct B, 
   % get the distance to POI
-  d_poi = pdist([[x; x_in] [y; y_in]])(1:n);
+  d_poi = pdist([[x; x_in] [y; y_in]]);
+  d_poi = d_poi(1:n);
   B = [arrayfun(wrapper, d_poi) 1];
   
   % solve the linear equation system of A and right side of B

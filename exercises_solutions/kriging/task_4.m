@@ -1,9 +1,7 @@
 %% Task 4
-pkg load statistics % you may need to uncomment this is Matlab
-warning('off', 'all');
 
 % read the data
-data = dlmread('artificial.csv', ',');
+data = readmatrix('artificial.csv');
 xi = data(:, 1);
 yi = data(:, 2);
 zi = data(:, 3);
@@ -37,17 +35,18 @@ disp('Start kriging with LSQ parameters...');
 lsq_res = kriging(xi, yi, zi, gridsize, model, lsq_range, lsq_sill, lsq_nugget, max_p);
 disp('done!');
 
-% plot
-figure;
+%% plot
+
+% figure;
+disp('plotting ...');
 subplot(1,2,1);
 image(my_res.*1024);
-colormap(viridis(2048));
+colormap(parula(2048));
 
 title(sprintf('range: %.2f  sill: %.2f   nugget: %.1f', my_range, my_sill, my_nugget));
-hold on;
 
 % 
 subplot(1,2,2);
 image(lsq_res.*1024);
-colormap(viridis(2048));
+colormap(parula(2048));
 title(sprintf('range: %.2f  sill: %.2f   nugget: %.1f', lsq_range, lsq_sill, lsq_nugget));

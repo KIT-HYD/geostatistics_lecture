@@ -39,16 +39,24 @@ function vgrid = kriging_with_minp(xi, yi, zi, gridsize, variogramf, range, sill
   minx = min(xi);
   miny = min(yi);
   
-  % apply the ordinary_krige function for each pixel in vgrid
-  h = waitbar(0, '0.0%');
+%% apply the ordinary_krige function for each pixel in vgrid
+  % Progress bar including cleanup routine.
+    h = waitbar(0, '0 %'); cleanupObj = onCleanup(@()close(h));
+    
   for i=1:rows
     for j=1:cols
       % current coordinates
       x = (j - 1) * stepx + minx;
       y = (i -1) * stepy + miny;
       vgrid(i,j) = ordinary_krige_with_minp(xi, yi, zi, x, y, variogramf, range, sill, nugget,min_p, max_p);
-      waitbar(i / rows, h, sprintf('%.1f%%', i / rows * 100));
+      waitbar(i / rows, h, sprintf('%.0f %%', i / rows * 100));
     end
   end
-  close(h);
 end
+
+
+
+
+
+
+

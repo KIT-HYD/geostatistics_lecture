@@ -30,7 +30,7 @@ function vgrid = kriging(xi, yi, zi, gridsize, variogramf, range, sill, nugget, 
   vgrid = ones(int16(y_range / gridsize), int16(x_range / gridsize)) * NaN;
   
   % get the size
-  [rows cols] = size(vgrid);
+  [rows, cols] = size(vgrid);
   
   % calculate the grid step size
   stepx = x_range / cols;
@@ -38,16 +38,21 @@ function vgrid = kriging(xi, yi, zi, gridsize, variogramf, range, sill, nugget, 
   minx = min(xi);
   miny = min(yi);
   
-  % apply the ordinary_krige function for each pixel in vgrid
-  h = waitbar(0, '0.0%');
+  %% apply the ordinary_krige function for each pixel in vgrid
+  
+    % Progress bar including cleanup routine.
+    h = waitbar(0, '0 %'); cleanupObj = onCleanup(@()close(h));
+ 
+ % Kriging calculation                  
   for i=1:rows
     for j=1:cols
       % current coordinates
       x = (j - 1) * stepx + minx;
       y = (i -1) * stepy + miny;
       vgrid(i,j) = ordinary_krige(xi, yi, zi, x, y, variogramf, range, sill, nugget, max_p);
-      waitbar(i / rows, h, sprintf('%.1f%%', i / rows * 100));
+
+        waitbar(i / rows, h, sprintf('%.0f %%', i / rows * 100));
     end
   end
-  close(h);
-end
+  
+ end

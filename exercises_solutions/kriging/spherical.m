@@ -16,13 +16,8 @@ function gamma=spherical(h, r, C0, b)
   %  -------
   %  gamma  double, semi-variance at lag h
   
-  % REPLACE FROM HERE
-  %gamma = 0.42 * C0;
-  % TO HERE
-  if h <= r
-    a = r;
-    gamma = b + C0 * ( ((3 * h) / (2 * a)) - (0.5 * (h/a)^3) );
-  else 
-    gamma = C0 + b;
-  end
+a = r;
+gamma = ones(1, length(h));
+gamma(h <= r)= b + C0 * ( ((3 * h(h <= r)) / (2 * a)) - (0.5 * (h(h <= r)/a).^3) );
+gamma(h > r) = C0 + b; 
 end
