@@ -30,7 +30,16 @@ function v = inverse_distance_fixed_neighbors(xi, yi, vi, x, y, n)
   [sorted_d idx] = sort(d);
   d_in = sorted_d(1:n);
   
-  v = sum(vi(idx(1:n)) ./ d_in) / sum(ones(1, length(d_in)) ./ d_in );
-  
+  % check if point to be interpolated is a sampling point (distance 0)
+  if any(d_in== 0)
+      % then use observed value
+       v = vi(find(d==0));
+  % else interpolate point
+  else
+       v = sum(vi(idx(1:n)) ./ d_in) / sum(ones(1, length(d_in)) ./ d_in );
+    if isnan(v)
+      disp('NaN in result! ')
+    end
+  end
   % SOLUTION END
 end

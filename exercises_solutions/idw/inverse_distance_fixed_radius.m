@@ -27,14 +27,23 @@ function v = inverse_distance_fixed_radius(xi, yi, vi, x, y, r)
   
   % SOLUTION START
   d = sqrt((xi - x).^2 + (yi - y).^2);
-  d_in = d(d <= r);
   
+  % check for points inside radius
+  if any(d <= r)
+      d_in = d(d <= r);
+  else
   % if no points in radius, return nan
-  if d_in == 0
     v = NaN;
     return
   end
   
-  v = sum(vi(d <= r) ./ d_in) / sum(ones(1, length(d_in)) ./ d_in);
+  % check if point to be interpolated is a sampling point (distance 0)
+  if any(d_in == 0)
+      % then use observed value
+       v = vi(find(d==0));
+  % else interpolate point
+  else
+      v = sum(vi(d <= r) ./ d_in) / sum(ones(1, length(d_in)) ./ d_in);
+  end
   % SOLUTION END
 end
